@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{FED9AE01-F6C7-4DB0-97DD-4B7EECF09E93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Xamarin.YandexMaps.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Xamarin.YandexMaps.iOS</AssemblyName>
+    <ReleaseVersion>1.0.11</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="StructsAndEnum\" />
+    <Folder Include="Resources\YandexMapKit_iOS7.bundle\" />
+    <Folder Include="Resources\YandexMapKit_iOS7.bundle\Programming\" />
+    <Folder Include="Resources\YandexMapKit.bundle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Extras.cs" />
+    <Compile Include="libYandexMapKit.linkwith.cs">
+      <DependentUpon>libYandexMapKit.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="YMKMain.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libYandexMapKit.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\TileUnavailable.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\TileUnavailable%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\TileUnavailable%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\TileUnavailable~ipad.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\TileUnavailable~ipad%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\TileUnavailable~ipad%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKAnnotationViewDefaultRightImage.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKAnnotationViewDefaultRightImage%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKAnnotationViewDefaultRightImage%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloon.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloon%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloon%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloonCommercial.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloonCommercial%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloonCommercial%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloonCommercialHighlighted.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloonCommercialHighlighted%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloonCommercialHighlighted%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloonHighlighted.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloonHighlighted%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKBlueBalloonHighlighted%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutBalloonBottomNormal.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutBalloonBottomNormal%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutBalloonBottomNormal%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutBalloonBottomRed.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutBalloonBottomRed%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutBalloonBottomRed%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutBalloonTop.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutBalloonTop%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutBalloonTop%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutStemNormal.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutStemNormal%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutStemNormal%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutStemRed.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutStemRed%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKCalloutStemRed%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKDraggableBlueBalloon.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKGreenBalloon.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKGreenBalloon%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKGreenBalloon%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKGreenBalloonHighlighted.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKGreenBalloonHighlighted%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKGreenBalloonHighlighted%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKLogoEn.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKLogoEn%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKLogoEn%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKLogoRu.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKLogoRu%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKLogoRu%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRouteMarkerBus.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRouteMarkerBus%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRouteMarkerBus%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRouteMarkerMetro.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRouteMarkerMetro%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRouteMarkerMetro%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRouteNode.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRouteNode%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRouteNode%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRulerImage.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRulerImage%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMKRulerImage%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMUserLocationMarkerView.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMUserLocationMarkerView%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMUserLocationMarkerView%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMUserLocationMarkerViewDirection.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMUserLocationMarkerViewDirection%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\en.lproj\YMUserLocationMarkerViewDirection%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\TileUnavailable.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\TileUnavailable%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\TileUnavailable%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\TileUnavailable~ipad.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\TileUnavailable~ipad%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\TileUnavailable~ipad%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\YMUserLocationMarkerView.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\YMUserLocationMarkerView%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\YMUserLocationMarkerView%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\YMUserLocationMarkerViewDirection.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\YMUserLocationMarkerViewDirection%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\ru.lproj\YMUserLocationMarkerViewDirection%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\TileUnavailable.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\TileUnavailable%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\TileUnavailable%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\TileUnavailable~ipad.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\TileUnavailable~ipad%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\TileUnavailable~ipad%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\YMUserLocationMarkerView.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\YMUserLocationMarkerView%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\YMUserLocationMarkerView%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\YMUserLocationMarkerViewDirection.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\YMUserLocationMarkerViewDirection%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\tr.lproj\YMUserLocationMarkerViewDirection%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\TileUnavailable.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\TileUnavailable%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\TileUnavailable%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\TileUnavailable~ipad.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\TileUnavailable~ipad%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\TileUnavailable~ipad%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\YMUserLocationMarkerView.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\YMUserLocationMarkerView%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\YMUserLocationMarkerView%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\YMUserLocationMarkerViewDirection.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\YMUserLocationMarkerViewDirection%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit_iOS7.bundle\uk.lproj\YMUserLocationMarkerViewDirection%403x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\TileUnavailable.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\TileUnavailable%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\TileUnavailable~ipad.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\TileUnavailable~ipad%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKAnnotationViewDefaultRightImage.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKAnnotationViewDefaultRightImage%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKBlueBalloon.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKBlueBalloon%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKBlueBalloonCommercial.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKBlueBalloonCommercial%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKBlueBalloonCommercialHighlighted.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKBlueBalloonCommercialHighlighted%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKBlueBalloonHighlighted.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKBlueBalloonHighlighted%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKCalloutBalloonBottomNormal.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKCalloutBalloonBottomNormal%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKCalloutBalloonBottomRed.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKCalloutBalloonBottomRed%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKCalloutBalloonTop.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKCalloutBalloonTop%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKCalloutStemNormal.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKCalloutStemNormal%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKCalloutStemRed.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKCalloutStemRed%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKDraggableBlueBalloon.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKGreenBalloon.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKGreenBalloon%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKGreenBalloonHighlighted.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKGreenBalloonHighlighted%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKLogoEn.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKLogoEn%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKLogoRu.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKLogoRu%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKRouteMarkerBus.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKRouteMarkerBus%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKRouteMarkerMetro.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKRouteMarkerMetro%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKRouteNode.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMKRouteNode%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMUserLocationMarkerView.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMUserLocationMarkerView%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMUserLocationMarkerViewDirection.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\en.lproj\YMUserLocationMarkerViewDirection%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\ru.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\ru.lproj\TileUnavailable.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\ru.lproj\TileUnavailable%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\ru.lproj\TileUnavailable~ipad.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\ru.lproj\TileUnavailable~ipad%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\ru.lproj\YMUserLocationMarkerView.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\ru.lproj\YMUserLocationMarkerView%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\ru.lproj\YMUserLocationMarkerViewDirection.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\ru.lproj\YMUserLocationMarkerViewDirection%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\tr.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\tr.lproj\TileUnavailable.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\tr.lproj\TileUnavailable%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\tr.lproj\TileUnavailable~ipad.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\tr.lproj\TileUnavailable~ipad%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\tr.lproj\YMUserLocationMarkerView.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\tr.lproj\YMUserLocationMarkerView%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\tr.lproj\YMUserLocationMarkerViewDirection.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\tr.lproj\YMUserLocationMarkerViewDirection%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\uk.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\uk.lproj\TileUnavailable.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\uk.lproj\TileUnavailable%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\uk.lproj\TileUnavailable~ipad.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\uk.lproj\TileUnavailable~ipad%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\uk.lproj\YMUserLocationMarkerView.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\uk.lproj\YMUserLocationMarkerView%402x.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\uk.lproj\YMUserLocationMarkerViewDirection.png" />
+    <BundleResource Include="Resources\YandexMapKit.bundle\uk.lproj\YMUserLocationMarkerViewDirection%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="StructsAndEnum\YMKMapType.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnum\YMKPinAnnotationColor.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnum\YMKTrafficInformerColor.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnum\YMKMapRegion.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnum\YMKMapViewPort.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnum\YMKMapPoint.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnum\YMKMapRect.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnum\YMKMapRegionSize.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnum\YMKCoordinateComponents.cs" />
+  </ItemGroup>
+</Project>
